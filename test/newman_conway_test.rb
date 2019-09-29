@@ -27,11 +27,11 @@ describe "Newman Conway Tests" do
         # Arrange
         input = 0
 
-        # Act
-        answer = newman_conway(input)
+        # Act-Assert
+        expect {
+          answer = newman_conway(input)
+        }.must_raise ArgumentError
     
-        # Assert
-        expect(answer).must_equal "0"
 
         # Arrange
         input = 1
@@ -40,7 +40,7 @@ describe "Newman Conway Tests" do
         answer = newman_conway(input)
     
         # Assert
-        expect(answer).must_equal "0 1"
+        expect(answer).must_equal "1"
 
         # Arrange
         input = 2
@@ -49,6 +49,6 @@ describe "Newman Conway Tests" do
         answer = newman_conway(input)
     
         # Assert
-        expect(answer).must_equal "0 1 1"        
+        expect(answer).must_equal "1 1"        
   end
 end
