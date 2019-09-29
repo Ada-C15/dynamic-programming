@@ -22,4 +22,33 @@ describe "Newman Conway Tests" do
     # Assert
     expect(answer).must_equal "1 1 2 2 3 4 4 4 5 6 7 7 8 8 8 8 9 10 11 12"
   end
+
+  it "works with base cases" do
+        # Arrange
+        input = 0
+
+        # Act
+        answer = newman_conway(input)
+    
+        # Assert
+        expect(answer).must_equal "0"
+
+        # Arrange
+        input = 1
+
+        # Act
+        answer = newman_conway(input)
+    
+        # Assert
+        expect(answer).must_equal "0 1"
+
+        # Arrange
+        input = 2
+
+        # Act
+        answer = newman_conway(input)
+    
+        # Assert
+        expect(answer).must_equal "0 1 1"        
+  end
 end
