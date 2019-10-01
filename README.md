@@ -27,7 +27,7 @@ Output : 1 1 2 2 3 4 4 4 5 6 7 7 8 8 8 8 9 10 11 12
 
 You should be able to do this in O(n) time complexity.
 
-## Largest Sum Contiguous Subarray
+## Wave 2 Largest Sum Contiguous Subarray
 
 Write a method to find the contiguous subarray in a 1-dimensional array with the largest sum.
 
@@ -52,6 +52,8 @@ return max_so_far
 ### Explanation
 
 The idea of the Kadane’s algorithm is to look for all positive contiguous segments of the array (max_ending_here is used for this). And keep track of the maximum sum contiguous segment among all positive segments (max_so_far is used for this). Each time we get a positive sum compare it with max_so_far and update max_so_far if it is greater than max_so_far
+
+There is also a subtle divide & conquer algorithm for this.
 
 ## Sources
 
