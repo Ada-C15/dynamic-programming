@@ -29,7 +29,7 @@ describe "Newman Conway Tests" do
 
         # Act-Assert
         expect {
-          answer = newman_conway(input)
+          newman_conway(input)
         }.must_raise ArgumentError
     
 
