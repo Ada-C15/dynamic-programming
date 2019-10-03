@@ -8,7 +8,7 @@ Dynamic programming is a strategy for developing an algorithm where each subprob
 
 ```
 P(1) = 1
-P(2) = 2
+P(2) = 1
 for all n > 2
 P(n) = P(P(n - 1)) + P(n - P(n - 1))
 ```
