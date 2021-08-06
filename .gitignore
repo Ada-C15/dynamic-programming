@@ -34,6 +34,7 @@ build-iPhoneSimulator/
 /_yardoc/
 /doc/
 /rdoc/
+venv
 
 ## Environment normalization:
 /.bundle/
