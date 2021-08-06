@@ -1,18 +1,9 @@
-require_relative "test_helper"
+from lib.max_subarray import max_sub_array
 
-xdescribe "max subarray" do
-  it "will work for [-2,1,-3,4,-1,2,1,-5,4]" do
-    # Arrange
-    input = [-2,1,-3,4,-1,2,1,-5,4]
+def test_max_subarray_on_empty_array():
+    assert max_sub_array([]) == 0
 
-    # Act
-    answer = max_sub_array(input)
-
-    # Assert
-    expect(answer).must_equal 6
-  end
-
-  it "will work with a totally negative array" do
+def test_max_subarray_with_negative_elements():
     # Arrange
     input = [-3, -4, -5, -6, -7]
 
@@ -20,21 +11,19 @@ xdescribe "max subarray" do
     answer = max_sub_array(input)
 
     # Assert
-    expect(answer).must_equal(-3)
-  end
+    assert answer == -3
 
-  it "will work with a totally negative array with the largest element at the rear" do
+def test_max_subarray_with_negative_array_with_largest_element_at_rear():
     # Arrange
-    input = [ -4, -5, -6, -7, -3]
+    input = [-4, -5, -6, -7, -1]
 
     # Act
     answer = max_sub_array(input)
 
     # Assert
-    expect(answer).must_equal(-3)
-  end
+    assert answer == -1
 
-  it "will work with a 1-element array" do
+def test_max_subarray_with_one_element_array():
     # Arrange
     input = [3]
 
@@ -42,21 +31,9 @@ xdescribe "max subarray" do
     answer = max_sub_array(input)
 
     # Assert
-    expect(answer).must_equal 3
-  end
+    assert answer == 3
 
-  it "will return nil for an empty array" do
-   # Arrange
-   input = []
-
-   # Act
-   answer = max_sub_array(input)
-
-   # Assert
-   expect(answer).must_be_nil
-  end
-
-  it "will work for [50, -50, 50]" do
+def test_max_sub_array_with_50_neg_50_50():
     # Arrange
     input = [50, -50, 50]
 
@@ -64,7 +41,24 @@ xdescribe "max subarray" do
     answer = max_sub_array(input)
 
     # Assert
-    expect(answer).must_equal 50
-  end
+    assert answer == 50
 
-end
+def test_max_sub_array_with_50_3_neg_50_3():
+    # Arrange
+    input = [50, -50, 50]
+
+    # Act
+    answer = max_sub_array(input)
+
+    # Assert
+    assert answer == 50
+
+def test_max_sub_array_with_50_3_neg_50_10_65_neg_3():
+        # Arrange
+    input = [50, 3, -50, 10, 65, -3]
+
+    # Act
+    answer = max_sub_array(input)
+
+    # Assert
+    assert answer == 78 # 50, 3, -50, 10, 65 (largest subarray)
