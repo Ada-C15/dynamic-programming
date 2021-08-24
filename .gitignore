@@ -9,6 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+__pycache__/
+
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -34,6 +36,7 @@ build-iPhoneSimulator/
 /_yardoc/
 /doc/
 /rdoc/
+venv
 
 ## Environment normalization:
 /.bundle/
