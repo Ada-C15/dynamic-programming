@@ -45,13 +45,13 @@ def test_max_sub_array_with_50_neg_50_50():
 
 def test_max_sub_array_with_50_3_neg_50_3():
     # Arrange
-    input = [50, -50, 50]
+    input = [50, 3, -50, 50, 3]
 
     # Act
     answer = max_sub_array(input)
 
     # Assert
-    assert answer == 50
+    assert answer == 56
 
 def test_max_sub_array_with_50_3_neg_50_10_65_neg_3():
         # Arrange
