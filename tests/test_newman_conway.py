@@ -11,7 +11,7 @@ def test_newman_conway_for_base_cases():
 
     # Arrange
     input = 1
-    
+
     # Act
     answer = newman_conway(input)
 
@@ -24,9 +24,9 @@ def test_newman_conway_for_base_cases():
 
     # Act
     answer = newman_conway(input)
-    
+
     # Assert
-    assert answer == "1 1"        
+    assert answer == "1 1"
 
 
 def test_newman_conway_for_13():
