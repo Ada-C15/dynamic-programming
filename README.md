@@ -13,6 +13,11 @@ for all n > 2
 P(n) = P(P(n - 1)) + P(n - P(n - 1))
 ```
 
+p(4) = p(p(3)) + P(4-(P(3)))
+p(4) = 1 + 1 = 2 
+p(3) = p(p(2)) + p(3-(P(2)))
+p(3) = 1 + 1 = 2 
+
 Given a number n then print n terms of Newman-Conway Sequence
 
 Examples:
