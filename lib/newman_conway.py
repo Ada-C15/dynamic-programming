@@ -1,11 +1,11 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n)
+# Space Complexity: O(n)
 def newman_conway(num):
     """ Returns a string of the Newman Conway numbers for the given value.
-        Time Complexity: ?
-        Space Complexity: ?
+        Time Complexity: O(n)
+        Space Complexity: O(n)
     """
     if num == 0:
         raise ValueError
@@ -20,5 +20,3 @@ def newman_conway(num):
         seq.append(next_num)
     
     return ' '.join([str(n) for n in seq[1:num+1]])
-
-print(newman_conway(9))
