@@ -1,11 +1,11 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n)
+# Space Complexity: O(n)
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
-        Time Complexity: ?
-        Space Complexity: ?
+        Time Complexity: O(n)
+        Space Complexity: O(n)
     """
     if num <= 0:
         raise ValueError("num cannot be less than 1")
