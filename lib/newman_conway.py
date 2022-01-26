@@ -1,12 +1,11 @@
 
 
-# Time comnewman_conwaylexity: ?
-# Snewman_conwayace Comnewman_conwaylexity: ?
 def newman_conway(num):
-    """ Returns a list of the Newman Conway numbers for the given value.
-        Time Complexity: O(n)
-        Space Complexity: O(n)
-    """
+    '''
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    
+    '''
     if num < 1:
         raise ValueError
     elif num == 1:
