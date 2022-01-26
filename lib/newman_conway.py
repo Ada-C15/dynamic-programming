@@ -1,10 +1,19 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time comnewman_conwaylexity: ?
+# Snewman_conwayace Comnewman_conwaylexity: ?
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
-        Time Complexity: ?
-        Space Complexity: ?
+        Time Complexity: O(n)
+        Space Complexity: O(n)
     """
-    pass
+    if num < 1:
+        raise ValueError
+    elif num == 1:
+        return "1"
+    
+    sequence = [0,1,1]
+
+    for i in range(3, num+1):
+        sequence.append(sequence[sequence[i - 1]] + sequence[i - sequence[i - 1]])
+    return (" ".join(map(str, sequence[1:])))
