@@ -5,8 +5,20 @@ def max_sub_array(nums):
         Time Complexity: ?
         Space Complexity: ?
     """
-    if nums == None:
+    if nums == None or len(nums) == 0:
         return 0
-    if len(nums) == 0:
-        return 0
-    pass
+
+    if len(nums) == 1:
+        return nums[0]
+    
+    max_sum = nums[0] + nums[1]
+    max_sum_here =  0
+
+    for i in range(len(nums)):
+        max_sum_here = max_sum_here + nums[i]
+        if max_sum < max_sum_here:
+            max_sum = max_sum_here
+        if max_sum_here < 0:
+            max_sum_here = 0
+
+    return max_sum
