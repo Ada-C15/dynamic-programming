@@ -7,4 +7,14 @@ def newman_conway(num):
         Time Complexity: ?
         Space Complexity: ?
     """
-    pass
+    if num < 1:
+        raise ValueError
+    elif num == 1: 
+        return "1"
+
+    seq = [None, 1, 1]
+
+    for i in range(3, num+1):
+        seq.append(seq[seq[i-1]]+seq[i - seq[i-1]])
+    return (" ".join(map(str, seq[1:])))
+
