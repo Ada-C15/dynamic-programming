@@ -2,7 +2,7 @@ from lib.max_subarray import max_sub_array
 
 def test_max_subarray_on_empty_array():
     
-    assert max_sub_array([], 0, 0) == 0
+    assert max_sub_array([]) == 0
 
 def test_max_subarray_with_negative_elements():
     # Arrange
@@ -10,7 +10,7 @@ def test_max_subarray_with_negative_elements():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == -3
@@ -21,7 +21,7 @@ def test_max_subarray_with_negative_array_with_largest_element_at_rear():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == -1
@@ -32,7 +32,7 @@ def test_max_subarray_with_one_element_array():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == 3
@@ -43,7 +43,7 @@ def test_max_sub_array_with_50_neg_50_50():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == 50
@@ -54,7 +54,7 @@ def test_max_sub_array_with_50_3_neg_50_3():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == 56
@@ -65,7 +65,7 @@ def test_max_sub_array_with_50_3_neg_50_10_65_neg_3():
     n = len(input)
 
     # Act
-    answer = max_sub_array(input, 0, n-1)
+    answer = max_sub_array(input)
 
     # Assert
     assert answer == 78 # 50, 3, -50, 10, 65 (largest subarray)
