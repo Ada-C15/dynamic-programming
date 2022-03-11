@@ -28,7 +28,7 @@ def max_mid_array(nums, left, mid, right):
     return (left_sum + right_sum)
 
 #To find the max subarray    
-def max_sub_array(nums, left, right):
+def max_sub_array(nums, left=0, right=None):
     """ Returns the max subarray of the given list of numbers.
         Returns 0 if  nums is None or an empty list.
         
@@ -39,8 +39,13 @@ def max_sub_array(nums, left, right):
         Space Complexity: Space complexity should be O(nLogn) as well because, according to my research, space complexity is relative to the size of the 
         call stack, which decreases by 2 values with each recursive call.  
     """
-    if len(nums) == 0:
+    n = len(nums)
+    
+    if n == 0:
         return 0
+    
+    if right == None:
+        right = n-1
     
     #base case == only one element
     if(left == right):
